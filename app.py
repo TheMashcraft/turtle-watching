@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return "Hello, World!"
 
+@app.route('/health')
+def health():
+    return "Healthy", 200
+
 @app.route('/greet/<name>')
 def greet(name):
     return f"Hello, {name}!"
