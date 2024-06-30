@@ -36,7 +36,6 @@ jobs:
         ECR_REPOSITORY: flask-app
         IMAGE_TAG: latest
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        docker build -t flask-app .
+        docker tag flask-app:latest public.ecr.aws/c5j2e5k7/flask-app:latest
+        docker push public.ecr.aws/c5j2e5k7/flask-app:latest
