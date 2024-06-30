@@ -30,7 +30,7 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       env:
-        ECR_REGISTRY: public.ecr.aws/c5j2e5k7/flask-app
+        ECR_REGISTRY: public.ecr.aws/c5j2e5k7
         ECR_REPOSITORY: flask-app
         IMAGE_TAG: latest
       run: |
